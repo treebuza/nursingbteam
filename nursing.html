@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<a href="https://www.google.com">구글로 이동</a>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <h1> 안녕하세요! 간호학과 B반 학우님들 </h1>
+    <h2> 조별 랜덤 사다리타기를 실행하겠습니다! XD </h2>
+
+
+</body>
+
+<body>
+
+    include <stdlib.h>
+        include <stdio.h>
+        include <time.h>
+        define students 39
+        
+        int table[50] = { 0, };
+        
+        int check(int num) {
+            int i;
+            for (i = 0; table[i] != 0; i++)
+                if (table[i] == num)
+                    return;
+            table[i] = num;
+        }
+        
+        int main(void) {
+            srand(time(NULL));
+            int temp;
+            for (int i = 0; table[students-1]==0; i++) {
+                temp = rand() % students + 1;
+                check(temp);
+            }
+            for (int i = 0; i < students; i++) {
+                if (i <= 20 && i % 5 == 0) printf("\n");
+                else if (i > 20 && i % 5 == 0) printf("\n");
+                printf("%d ", table[i]);
+            }
+        }
+        
+</body>
+</html>
