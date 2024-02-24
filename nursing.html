@@ -14,37 +14,3 @@
 
 
 </body>
-
-<body>
-
-    include <stdlib.h>
-        include <stdio.h>
-        include <time.h>
-        define students 39
-        
-        int table[50] = { 0, };
-        
-        int check(int num) {
-            int i;
-            for (i = 0; table[i] != 0; i++)
-                if (table[i] == num)
-                    return;
-            table[i] = num;
-        }
-        
-        int main(void) {
-            srand(time(NULL));
-            int temp;
-            for (int i = 0; table[students-1]==0; i++) {
-                temp = rand() % students + 1;
-                check(temp);
-            }
-            for (int i = 0; i < students; i++) {
-                if (i <= 20 && i % 5 == 0) printf("\n");
-                else if (i > 20 && i % 5 == 0) printf("\n");
-                printf("%d ", table[i]);
-            }
-        }
-        
-</body>
-</html>
